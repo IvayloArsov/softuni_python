@@ -1,4 +1,4 @@
-# TODO needs reviewing because this is utter trash
+# TODO needs reviewing because this code is plagiarized
 # names_of_gifts = input().split(" ")
 #
 #

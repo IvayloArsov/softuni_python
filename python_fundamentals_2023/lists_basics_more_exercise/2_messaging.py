@@ -11,10 +11,8 @@ for num in numbers:
 
 new_string = ''
 for index in indices:
-        effective_index = index % len(words)
-        new_string += words[effective_index]
-        words.pop(effective_index)
-
+    effective_index = index % len(words)
+    new_string += words[effective_index]
+    words.pop(effective_index)
 
 print(new_string)
-

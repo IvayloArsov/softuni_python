@@ -40,5 +40,3 @@ while True:
 #     elif command.startswith('leave'):
 #         command, idx, number = command.split()
 #         train[int(idx)] -= int(number)
-
-

@@ -1,9 +1,13 @@
 def move_letters(sequence, num):
-    sequence = sequence[num:]+sequence[:num]
+    sequence = sequence[num:] + sequence[:num]
     return sequence
+
+
 def insert_letters(sequence, num, letter):
-    sequence = sequence[:num]+letter+sequence[num:]
+    sequence = sequence[:num] + letter + sequence[num:]
     return sequence
+
+
 def change_letters(sequence, old_letter, new_letter):
     return sequence.replace(old_letter, new_letter)
 

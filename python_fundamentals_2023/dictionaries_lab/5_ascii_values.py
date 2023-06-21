@@ -1,0 +1,1 @@
+print({l: ord(l) for l in input().split(", ")})

@@ -17,7 +17,7 @@ while cmd_line != "Done":
     elif command == "Substitute":
         old_str, new_str = info
         if old_str == new_str or old_str not in raw_string:
-            print("Nothing to replace")
+            print("Nothing to replace!")
         else:
             raw_string = raw_string.replace(old_str, new_str)
             print(raw_string)

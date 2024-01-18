@@ -1,0 +1,3 @@
+article > span:last-of-type {
+    color: red;
+}

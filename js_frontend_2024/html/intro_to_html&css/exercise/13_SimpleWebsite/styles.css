@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CCCCCC;
+}
+
+nav {
+    background-color: #444;
+}
+ul {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+li {
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 40px;
+    height: 40px;
+    padding: 20px;
+}
+header h1 {
+    font-size: 28px;
+
+}
+header p {
+    font-style: italic;
+}
+article > p {
+    font-size: 24px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CCCCCC;
+}
+section {
+    margin-left: 20px;
+}
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+}
+footer > p {
+    padding: 10px;
+}

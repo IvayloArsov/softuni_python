@@ -1,0 +1,103 @@
+padding: 20px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    background-color: rgb(238, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+ul {
+    padding-bottom: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+.page {
+    max-width: 55em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.site-header {
+    flex: 0 0 100%;
+    border-bottom: 2px solid black;
+}
+.site-title {
+    font-size: 3em;
+    line-height: 1;
+    padding: 0;
+    font-weight: bold;
+}
+
+.site-main {
+    flex: 0 0 70%;
+}
+.site-aside {
+    flex: 1 0 auto;
+}
+.second-img {
+    float:left;
+    margin: 0 1em 1em 0;
+}
+.first-img {
+    float:right;
+    margin: 0 0 1em 1em;
+}
+img[class*="img"] {
+    border: 3px solid #333;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+}
+
+blockquote {
+    opacity: 0.7;
+    float: right;
+    font-style: italic;
+    max-width: 50%;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+}
+blockquote .author {
+    text-align: right;
+
+}
+
+aside ul {
+    padding: 0.5em;
+    margin: 0.5em;
+    list-style-type: square;
+}
+aside ul li {
+    color: green
+}

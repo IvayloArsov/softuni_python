@@ -1,0 +1,116 @@
+html {
+    background-color: rgb(238, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-block: 20px;
+    padding-inline: 70px;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body{
+    padding-inline: 70px;
+}
+main {
+    position: relative;
+    width: 75%;
+}
+header {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.2;
+}
+a {
+    color: rgb(0, 102, 0);
+    text-decoration: none;
+}
+h1, h2, h3, blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1.1;
+    padding-top: 1em;
+}
+img {
+    padding: 0.5em;
+    border: 2px solid #000;
+    box-shadow: 0 0 1em 0.1em rgba(0, 0, 0, 0.2);
+}
+/*Navbar*/
+.site-header {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid black;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.site-title {
+    top: 1em;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.site-navbar {
+    position: absolute;
+    top: 2em;
+    left: 62%;
+    display: inline-block;
+}
+.site-navbar ul {
+    list-style: none;
+}
+.site-navbar li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+/*Images*/
+
+.article-img1 {
+    float: right;
+    margin: 0 1em;
+}
+
+.article-img2 {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+/*Sidebar*/
+.sidebar {
+    position: relative;
+    line-height: 1.2;
+    top: 0;
+    left: 65%;
+}
+.sidebar h3 {
+    font-size: 26px;
+}
+/*Main*/
+
+.site-article h1 {
+    font-size: 32px;
+}
+.site-article h2 {
+    font-size: 24px;
+}
+.site-article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+}
+blockquote {
+    color: gray;
+    font-style: italic;
+    border-left: 0.2em solid gray;
+    margin: 0 0.5em 0 2em;
+    padding: 0 0 4em 1em;
+    width: 50%;
+    float: right;
+}
+blockquote p:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    line-height: 1.5;
+}
+blockquote .author {
+    text-align: end;
+}

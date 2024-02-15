@@ -1,0 +1,46 @@
+* {
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    background-color: rgb(238, 238, 238);
+
+}
+
+h1 {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1em 0.3em rgb(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+div {
+    border-radius: 7px;
+}
+
+.card .img-box img {
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.text-box {
+    padding: 1em 1.5em 5em;
+    position: relative;
+}
+
+.card a {
+    background-color: rgb(0, 153, 0);
+    color: white;
+    border-radius: 0.25em;
+    position: absolute;
+    bottom: 1.4em;
+    right: 1.4em;
+    text-decoration: none;
+    padding: 0.7em;
+}

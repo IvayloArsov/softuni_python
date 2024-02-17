@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 0.2em;
+    background-color: #Badcfb;
+}
+
+main {
+    display: flex;
+    gap: 0.5em;
+}
+.site-nav {
+    width: 20%;
+    align-items: stretch;
+}
+
+.site-nav li {
+    list-style: none;
+    padding: 0.3em;
+}
+
+.site-nav li a {
+    text-decoration: none;
+}
+
+.site-content {
+    width: 80%;
+}
+
+.site-content h2 {
+    font-size: 28px;
+    padding-top: 0.7em;
+}
+
+.site-content ul {
+    padding: 1em 0 1em 2.2em;
+}
+
+div {
+    padding: 0.5em;
+    border-radius: 0.2em;
+    background-color: #Badcfb;
+}
+
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+
+    .site-nav, .site-content {
+        width: 100%;
+    }
+}

@@ -1,7 +1,6 @@
 function printStudentInfo(name, age, averageGrade) {
-    const formattedGrade = averageGrade.toFixed(2);
-    console.log(`Name: ${name}, Age: ${age}, Grade: ${formattedGrade}`);
-
+  const formattedGrade = averageGrade.toFixed(2);
+  console.log(`Name: ${name}, Age: ${age}, Grade: ${formattedGrade}`);
 }
 
 const studentName = "Asdf Fsda";

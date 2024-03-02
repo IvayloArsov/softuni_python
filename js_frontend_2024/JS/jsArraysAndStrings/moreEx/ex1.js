@@ -19,6 +19,6 @@ function login(arr) {
   }
 }
 
-//login(["sunny", "rainy", "cloudy", "sunny", "not sunny"]);
-//login(["momo", "omom"]);
+login(["sunny", "rainy", "cloudy", "sunny", "not sunny"]);
+login(["momo", "omom"]);
 login(["Acer", "login", "go", "let me in", "recA"]);

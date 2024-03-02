@@ -3,6 +3,7 @@ function formatGrade(grade) {
   switch (true) {
     case grade < 3.0:
       gradeDescription = "Fail";
+      grade = 2;
       break;
     case grade < 3.5:
       gradeDescription = "Poor";
@@ -11,12 +12,14 @@ function formatGrade(grade) {
       gradeDescription = "Good";
       break;
     case grade < 5.5:
-      gradeDescription = "Very Good";
+      gradeDescription = "Very good";
       break;
     default:
       gradeDescription = "Excellent";
   }
-  console.log(`Grade: ${grade.toFixed(2)} - ${gradeDescription}`);
+  const formattedGrade = grade < 3.0 ? grade : grade.toFixed(2);
+  console.log(`${gradeDescription} (${formattedGrade})`);
 }
 
-formatGrade(3.33);
+formatGrade(2.99);
+formatGrade(3.5);

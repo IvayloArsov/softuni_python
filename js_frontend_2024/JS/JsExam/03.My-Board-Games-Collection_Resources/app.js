@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  function displayGame(game, id) {
+  function displayGame(game) {
     const div = document.createElement("div");
     div.className = "board-game";
     div.innerHTML = `

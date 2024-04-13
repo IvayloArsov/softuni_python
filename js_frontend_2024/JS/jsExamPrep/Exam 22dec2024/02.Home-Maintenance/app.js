@@ -9,6 +9,10 @@ function solve() {
   const addBtn = document.getElementById("add-btn");
 
   addBtn.addEventListener("click", function () {
+    if (!place.value.trim() || !action.value.trim() || !person.value.trim()) {
+      return;
+    }
+
     const li = document.createElement("li");
     li.classList.add("clean-task");
     let structureLi = `
@@ -32,21 +36,25 @@ function solve() {
     const editBtn = li.querySelector(".edit");
     editBtn.addEventListener("click", function () {
       const details = li.querySelectorAll("article p");
-      place.value = details[0].textContent.replace("Place: ", "");
-      action.value = details[1].textContent.replace("Action: ", "");
-      person.value = details[2].textContent.replace("Person: ", "");
+      place.value = details[0].textContent.replace("Place:", "");
+      action.value = details[1].textContent.replace("Action:", "");
+      person.value = details[2].textContent.replace("Person:", "");
       taskList.removeChild(li);
     });
 
     const doneBtn = li.querySelector(".done");
     doneBtn.addEventListener("click", function () {
       taskList.removeChild(li);
-      li.querySelector(
-        "div"
-      ).innerHTML = `<button class="delete">Delete</button>`;
-      doneList.appendChild(li);
+      li.classList.remove("clean-task");
 
-      const deleteBtn = li.querySelector(".delete");
+      const buttonsDiv = li.querySelector("div");
+      buttonsDiv.innerHTML = "";
+      li.removeChild(buttonsDiv);
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.className = "delete";
+      li.appendChild(deleteBtn);
+      doneList.appendChild(li);
       deleteBtn.addEventListener("click", function () {
         doneList.removeChild(li);
       });

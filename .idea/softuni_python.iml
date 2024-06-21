@@ -6,8 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/python_advanced_2023/OOP/4_encapsulation/Exercise/project" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_advanced_2023/OOP/6_polymorphism_abstraction/Exercise/4_wild_farm" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_advanced_2023/oop/exams/15_09_23/01. Structure_Skeleton/project" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (softuni_python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

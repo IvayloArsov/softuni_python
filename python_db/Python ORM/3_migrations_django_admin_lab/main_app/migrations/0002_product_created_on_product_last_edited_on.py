@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('main_app', '0001_initial'),
     ]
@@ -14,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='product',
             name='created_on',
-            field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2024, 6, 23, 10, 47, 13, 591303, tzinfo=datetime.timezone.utc)),
+            field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2024, 6, 23, 10, 47, 13, 591303,
+                                                                                    tzinfo=datetime.timezone.utc)),
             preserve_default=False,
         ),
         migrations.AddField(

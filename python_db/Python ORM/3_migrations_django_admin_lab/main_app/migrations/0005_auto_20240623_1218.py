@@ -26,9 +26,10 @@ def reverse_add_barcode(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('main_app', '0003_alter_product_category_alter_product_supplier'),
+        ('main_app', '0004_product_barcode'),
     ]
 
     operations = [
-        migrations.RunPython(add_barcode, reverse_code=reverse_add_barcode)
+        migrations.RunPython(add_barcode,
+                             reverse_code=reverse_add_barcode)
     ]

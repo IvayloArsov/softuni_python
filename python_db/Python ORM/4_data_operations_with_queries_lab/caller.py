@@ -2,11 +2,9 @@ import os
 import django
 from datetime import date, datetime
 
-
 # Set up Django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "orm_skeleton.settings")
 django.setup()
-
 
 # Import your models here
 # Run and print your queries
@@ -49,4 +47,18 @@ def get_students_info():
     return '\n'.join(lines)
 
 
-print(get_students_info())
+def update_students_emails():
+    students_info = Student.objects.all()
+    for student in students_info:
+        student.email = student.email[:-14] + 'uni-students.com'
+        student.save()
+
+
+def truncate_students():
+    students = Student.objects.all()
+    students.delete()
+
+
+truncate_students()
+print(Student.objects.all())
+print(f'Number of students: {Student.objects.count()}')

@@ -40,5 +40,13 @@ def add_students():
         student_obj.save()
 
 
-add_students()
-print(Student.objects.all())
+def get_students_info():
+    students_info = Student.objects.all()
+    lines = [
+        f'Student №{student.student_id}: {student.first_name} {student.last_name}; Email: {student.email}'
+        for student in students_info
+    ]
+    return '\n'.join(lines)
+
+
+print(get_students_info())

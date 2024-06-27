@@ -30,3 +30,46 @@ class Car(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     price_with_discount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
+
+class Task(models.Model):
+    title = models.CharField(max_length=25)
+    description = models.TextField()
+    due_date = models.DateField()
+    is_finished = models.BooleanField(default=False)
+
+
+class HotelRoom(models.Model):
+    class RoomType(models.TextChoices):
+        STANDARD = 'Standard', 'Standard'
+        DELUXE = 'Deluxe', 'Deluxe'
+        SUITE = 'Suite', 'Suite'
+
+    room_number = models.PositiveIntegerField()
+    room_type = models.CharField(
+        max_length=20,
+        choices=RoomType.choices,
+        default=RoomType.STANDARD,
+    )
+    capacity = models.PositiveIntegerField()
+    amenities = models.TextField()
+    price_per_night = models.DecimalField(max_digits=8, decimal_places=2)
+    is_reserved = models.BooleanField(default=False)
+
+class Character(models.Model):
+    class ClassType(models.TextChoices):
+        MAGE = 'Mage', 'Mage'
+        WARRIOR = 'Warrior', 'Warrior'
+        ASSASSIN = 'Assassin', 'Assassin'
+        SCOUT = 'Scout', 'Scout'
+    name = models.CharField(max_length=100)
+    class_name = models.CharField(
+        max_length=20,
+        choices=ClassType.choices,
+    )
+    level = models.PositiveIntegerField()
+    strength = models.PositiveIntegerField()
+    dexterity = models.PositiveIntegerField()
+    intelligence = models.PositiveIntegerField()
+    hit_points = models.PositiveIntegerField()
+    inventory = models.TextField()
+

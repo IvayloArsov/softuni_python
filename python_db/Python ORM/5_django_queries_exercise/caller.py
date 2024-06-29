@@ -101,3 +101,107 @@ def grand_chess_title_regular_player():
     (ChessPlayer.objects.all()
      .filter(rating__gte=0, rating__lte=2199)
      .update(title='regular player'))
+
+
+### Meal
+def set_new_chefs():
+    Meal.objects.update(
+        chef=Case(
+            When(meal_type='Breakfast', then=Value('Gordon Ramsay')),
+            When(meal_type='Lunch', then=Value('Julia Child')),
+            When(meal_type='Dinner', then=Value('Jamie Oliver')),
+            When(meal_type='Snack', then=Value('Thomas Keller'))
+        )
+    )
+
+
+def set_new_preparation_times():
+    Meal.objects.update(
+        preparation_time=Case(
+            When(meal_type='Breakfast', then=Value('10 minutes')),
+            When(meal_type='Lunch', then=Value('12 minutes')),
+            When(meal_type='Dinner', then=Value('15 minutes')),
+            When(meal_type='Snack', then=Value('5 minutes')),
+        )
+    )
+
+
+def update_low_calorie_meals():
+    (Meal.objects.all()
+     .filter(meal_type__in=['Breakfast', 'Dinner'])
+     .update(calories=400))
+
+
+def update_high_calorie_meals():
+    (Meal.objects.all()
+     .filter(meal_type__in=['Lunch', 'Snack'])
+     .update(calories=700))
+
+
+def delete_lunch_and_snack_meals():
+    (Meal.objects.all()
+     .filter(meal_type__in=['Lunch', 'Snack'])
+     .delete())
+
+
+### Dungeon
+
+def show_hard_dungeons():
+    dungeons = (Dungeon.objects.all()
+                .filter(difficulty='Hard')
+                .order_by('-location'))
+    dungeons = [
+        f'{dungeon.name} is guarded by {dungeon.boss_name} who has {dungeon.boss_health} health points!'
+        for dungeon in dungeons
+    ]
+    return '\n'.join(dungeons)
+
+
+def bulk_create_dungeons(*args):
+    Dungeon.objects.bulk_create(*args)
+
+
+def update_dungeon_names():
+    Dungeon.objects.all().update(
+        name=Case(
+            When(difficulty='Easy', then=Value('The Erased Thombs')),
+            When(difficulty='Medium', then=Value("The Coral Labyrinth")),
+            When(difficulty='Hard', then=Value("The Lost Haunt"))
+        )
+    )
+
+
+def update_dungeon_bosses_health():
+    (Dungeon.objects.all()
+     .exclude(difficulty='Easy')
+     .update(boss_health=500))
+
+
+def update_dungeon_recommended_levels():
+    Dungeon.objects.all().update(
+        recommended_level=Case(
+            When(difficulty='Easy', then=Value(25)),
+            When(difficulty='Medium', then=Value(50)),
+            When(difficulty='Hard', then=Value(75)),
+        )
+    )
+
+
+def update_dungeon_rewards():
+    Dungeon.objects.all().update(
+        reward=Case(
+            When(boss_health=500, then=Value('1000 Gold')),
+            When(location__startswith='E', then=Value('New dungeon unlocked')),
+            When(location__endswith='s', then=Value('Dragonheart Amulet'))
+        )
+    )
+
+
+def set_new_locations():
+    Dungeon.objects.all().update(
+        location=Case(
+            When(recommended_level=25, then=Value('Enchanted Maze')),
+            When(recommended_level=50, then=Value('Grimstone Mines')),
+            When(recommended_level=75, then=Value('Shadowed Abyss')),
+        )
+    )

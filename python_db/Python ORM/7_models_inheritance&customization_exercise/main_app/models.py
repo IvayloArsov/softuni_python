@@ -189,7 +189,8 @@ class BaseReservation(models.Model):
         self.full_clean()
         self.check_overlapping_reservations(exclude_pk=self.pk)
         super().save(*args, **kwargs)
-        return f"{self.__class__.__name__} for room {self.room.number}"
+        class_name = self.__class__.__name__.replace('Reservation', '').strip()
+        return f"{class_name} reservation for room {self.room.number}"
 
 
 class RegularReservation(BaseReservation):

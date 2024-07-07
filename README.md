@@ -4,7 +4,7 @@
 
 This repository is a treasure trove of my personal solutions and 
 progress through the Python Developer curriculum at 
-SoftUni (Software University). It's organized by courses and 
+SoftUni. It's organized by courses and 
 individual assignments, showcasing my coding journey step by step.
 
 ## 🎯 Purpose

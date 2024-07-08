@@ -1,6 +1,6 @@
 from django.db import models
 
-from managers import RealEstateListingManager
+from managers import RealEstateListingManager, VideoGameManager
 
 
 # Create your models here.

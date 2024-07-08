@@ -10,6 +10,3 @@ django.setup()
 # Import your models here
 from main_app.models import *
 
-# Run and print your queries
-
-

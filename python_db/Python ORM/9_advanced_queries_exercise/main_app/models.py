@@ -148,9 +148,38 @@ class Task(models.Model):
         )
 
 
+# 06. Gym Session
 class Exercise(models.Model):
     name = models.CharField(max_length=100)
     category = models.CharField(max_length=50)
     difficulty_level = models.PositiveIntegerField()
     duration_minutes = models.PositiveIntegerField()
     repetitions = models.PositiveIntegerField()
+
+    @classmethod
+    def get_long_and_hard_exercises(cls):
+        return cls.objects.filter(
+            difficulty_level__gte=10,
+            duration_minutes__gt=30
+        )
+
+    @classmethod
+    def get_short_and_easy_exercises(cls):
+        return cls.objects.filter(
+            difficulty_level__lt=5,
+            duration_minutes__lt=15
+        )
+
+    @classmethod
+    def get_exercises_within_duration(cls, min_duration: int, max_duration: int):
+        return cls.objects.filter(
+            duration_minutes__gte=min_duration,
+            duration_minutes__lte=max_duration
+        )
+
+    @classmethod
+    def get_exercises_with_difficulty_and_repetitions(cls, min_difficulty: int, min_repetitions: int):
+        return cls.objects.filter(
+            difficulty_level__gte=min_difficulty,
+            repetitions__gte=min_repetitions
+        )

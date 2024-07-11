@@ -2,6 +2,8 @@ from django.utils import timezone
 from django.core.validators import MinLengthValidator, MaxLengthValidator, MinValueValidator, MaxValueValidator
 from django.db import models
 
+from main_app.managers import DirectorsManager
+
 
 # Create your models here.
 
@@ -29,6 +31,7 @@ class Director(models.Model):
         ],
         default=0
     )
+    objects = DirectorsManager()
 
 
 class Actor(models.Model):

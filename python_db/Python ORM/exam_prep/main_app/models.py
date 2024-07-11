@@ -118,7 +118,8 @@ class Movie(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        related_name='actor_starring_movies'
     )
     actors = models.ManyToManyField(
         Actor,
-        related_name='actor_movies')
+        related_name='actor_all_movies')

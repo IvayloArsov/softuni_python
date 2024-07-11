@@ -42,3 +42,5 @@ cover/
 __pycache__
 *.zip
 project.zip
+db.sqlite3
+*.sqlite3

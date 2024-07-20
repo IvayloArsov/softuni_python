@@ -22,3 +22,6 @@ class Fruit(models.Model):
         ]
     )
 
+    image_url = models.URLField()
+    description = models.TextField()
+    nutrition = models.TextField()

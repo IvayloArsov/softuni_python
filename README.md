@@ -2,7 +2,7 @@
 
 ## 📚 Overview
 
-This repository is a treasure trove of my personal solutions and 
+This repo is a collection of my personal solutions and 
 progress through the Python Developer curriculum at 
 SoftUni. It's organized by courses and 
 individual assignments, showcasing my coding journey step by step.
@@ -13,7 +13,7 @@ This repository serves as:
 
 1. 📖 A personal archive of my learning odyssey
 2. 🔍 A quick reference for my completed work
-3. 💡 An inspiration source for fellow code explorers
+3. 💡 An inspiration source for fellow students
 
 ## ⚠️ Disclaimer
 

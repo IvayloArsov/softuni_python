@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    <main>
+        <!-- Dashboard page -->
+
+
+        {% if posts %}
+            <!-- Display a heading if there are posts -->
+            <h2>Published Posts</h2>
+
+        {% else %}
+            <!-- Display a heading if there are NO posts -->
+            <h2>No published posts yet.</h2>
+        {% endif %}
+        <section id="dashboard">
+            {% for post in posts %}
+                <div class="post">
+                    <img
+                            src="{{ post.image_url }}"
+                            alt="My cool fluffy rabbits img"
+                    />
+                    <!-- post title -->
+                    <h3 class="title">{{ post.title }}</h3>
+                    <!-- post content -->
+                    <p class="description">{{ post.content|truncatewords:3 }}</p>
+                    <!-- post details button -->
+                    <a class="details-btn" href="{% url 'details' post.id %}">See More</a>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+    </div>
+
+{% endblock %}
